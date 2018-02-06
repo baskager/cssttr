@@ -4,9 +4,9 @@
 
 >Users with mobility disabilities, including repetitive stress injuries, may not be able to use a mouse or trackpad. These people are able to access content through the use of a keyboard by pressing the "tab" or "arrow" keys, or through the use of alternative input devices such as single-switch input or mouth stick. As a result, the tab order should match the visual order, so keyboard-only users are able to logically navigate through site content.
 >
-Long pages with lots of content should be broken up with anchor links (jump lists), allowing keyboard-only users to skip to relevant portions of the page without having to negotiate through other content. "Skip to main content" should be provided at the top of each page, so keyboard-only users won't have to tab through the page navigation in order to get the main content.
+>Long pages with lots of content should be broken up with anchor links (jump lists), allowing keyboard-only users to skip to relevant portions of the page without having to negotiate through other content. "Skip to main content" should be provided at the top of each page, so keyboard-only users won't have to tab through the page navigation in order to get the main content.
 >
-For pages with local menus and multiple levels and sub-items, the menus should be configured so that all menu items can be accessed with the keyboard. Do not use elements that only activate when a user hovers over items with a mouse, as keyboard-only or screen readers users will not be able to activate them.
+>For pages with local menus and multiple levels and sub-items, the menus should be configured so that all menu items can be accessed with the keyboard. Do not use elements that only activate when a user hovers over items with a mouse, as keyboard-only or screen readers users will not be able to activate them.
 
 #### The tab order should match the visual order
 De volgorde van de tabs moet aansluiten op de verticale volgorde van de paginas. Gebruikers dienen niet verrast te worden door een "springende tab". Dit kan voorkomen worden door te letten op onderdelen in de responsive template die inklappen en door te letten op elementen zoals lijsten in de pagina.
