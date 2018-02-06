@@ -8,6 +8,8 @@
 >
 >For pages with local menus and multiple levels and sub-items, the menus should be configured so that all menu items can be accessed with the keyboard. Do not use elements that only activate when a user hovers over items with a mouse, as keyboard-only or screen readers users will not be able to activate them.
 
+Bron: <https://webaccess.berkeley.edu/resources/tips/web-accessibility#accessible-content>
+
 #### The tab order should match the visual order
 De volgorde van de tabs moet aansluiten op de verticale volgorde van de paginas. Gebruikers dienen niet verrast te worden door een "springende tab". Dit kan voorkomen worden door te letten op onderdelen in de responsive template die inklappen en door te letten op elementen zoals lijsten in de pagina.
 
