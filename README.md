@@ -1,3 +1,5 @@
-# Components
+# CSS to the rescue
 
-Rating example makes use of Emoji from: http://emojione.com
+## Documentatie
+Voor documentatie en onderzoek, refereer naar de 'documentatie'
+map in deze repository
