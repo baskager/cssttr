@@ -3,7 +3,6 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
-
 body a[tabindex^="1"] {
   left:-999px;
   position:absolute;
@@ -50,18 +49,18 @@ header h1 {
   margin-bottom: 1em;
 }
 nav>ul {
-  /*background: url('black.jpg');*/
   background: #1F2D3D;
   background-size: cover;
   background-position: center;
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   height: calc(40vh);
-  grid-template-columns: repeat(4, 1fr);
   padding: 0;
   margin: 0;
 }
 nav a {
-  padding: 0.5em;
+  padding: 0.5em 0;
+  text-align: center;
   box-sizing: border-box;
   transition: margin 0.5s ease;
   transition: background-color 0.5s ease, width 0.5s ease, margin 0.5s ease, height 0.5s ease;
@@ -114,4 +113,12 @@ nav>ul>li>ul:nth-child(2) a {
 nav>ul>li {
   border: 2px 2px 2px 2px solid #DC304B;
   list-style: none;
+  width: 100%;
+}
+@media (max-width: 780px) {
+    nav>ul {
+        flex-wrap: wrap;
+        background: black;
+        height: auto;
+    }
 }
