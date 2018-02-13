@@ -76,13 +76,13 @@ nav a:not([href$="products"]) {
 
 nav a:hover,
 nav a:focus {
-  background: #DC304B!important;!important;
+  background: #DC304B;
 }
 
 nav a:not([href$="products"]):hover,
 nav a:not([href$="products"]):focus {
-  width: 90%!important;
-  height: 90%!important;
+  width: 90%;
+  height: 90%;
   outline: 0;
 }
 
