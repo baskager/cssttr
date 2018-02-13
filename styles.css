@@ -15,7 +15,6 @@ body a[tabindex^="1"] {
 }
 body a[tabindex^="1"]:focus, body a[tabindex^="1"]:active {
   color: #fff;
-  background-color:#000;
   left: 0;
   top: 0;
   overflow:auto;
