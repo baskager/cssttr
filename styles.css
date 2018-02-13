@@ -4,11 +4,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 body a[tabindex^="1"] {
-  left:-999px;
+  left:63em;
   position:absolute;
   top:auto;
-  width:1px;
-  height:1px;
+  width: 0;
+  height: 0;
   overflow:hidden;
   text-decoration: underline;
   z-index:-999;
@@ -35,7 +35,7 @@ header {
   background-size: cover;
   background-position: center;
   display: grid;
-  height: calc(60vh);
+  height: 60vh;
   grid-template-columns: repeat(1, 1fr);
   padding: 0;
   margin: 0;
@@ -54,7 +54,7 @@ nav>ul {
   background-position: center;
   display: flex;
   justify-content: space-between;
-  height: calc(40vh);
+  height: 40vh;
   padding: 0;
   margin: 0;
 }
@@ -102,7 +102,7 @@ nav>ul>li>ul {
   height: 50%;
   width: 100%;
   list-style: none;
-  border-top: 4px solid #DC304B;
+  border-top: 0.2em solid #DC304B;
 }
 nav>ul>li>ul:nth-child(2) a {
   width: 100%;
@@ -111,11 +111,11 @@ nav>ul>li>ul:nth-child(2) a {
 }
 
 nav>ul>li {
-  border: 2px 2px 2px 2px solid #DC304B;
+  border: 0.1em 0.1em 0.1em 0.1em solid #DC304B;
   list-style: none;
   width: 100%;
 }
-@media (max-width: 780px) {
+@media (max-width: 52em) {
     nav>ul {
         flex-wrap: wrap;
         background: black;
