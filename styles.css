@@ -15,7 +15,6 @@ body>a:first-child {
 }
 body>a:first-child:focus, body>a:first-child:active {
   color: #fff;
-  background-color:#000;
   left: 0;
   top: 0;
   overflow:auto;
