@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
-body a[tabindex^="1"] {
+body>a:first-child {
   left:-999px;
   position:absolute;
   top:auto;
@@ -13,7 +13,7 @@ body a[tabindex^="1"] {
   text-decoration: underline;
   z-index:-999;
 }
-body a[tabindex^="1"]:focus, body a[tabindex^="1"]:active {
+body>a:first-child:focus, body>a:first-child:active {
   color: #fff;
   background-color:#000;
   left: 0;
@@ -76,6 +76,7 @@ nav a:not([href$="products"]) {
 
 nav a:hover,
 nav a:focus {
+  outline: 0;
   background: #DC304B!important;!important;
 }
 
@@ -83,7 +84,6 @@ nav a:not([href$="products"]):hover,
 nav a:not([href$="products"]):focus {
   width: 90%!important;
   height: 90%!important;
-  outline: 0;
 }
 
 /* All direct children of type a within li in the wrapper */
