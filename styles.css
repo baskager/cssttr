@@ -62,8 +62,7 @@ nav a {
   padding: 0.5em 0;
   text-align: center;
   box-sizing: border-box;
-  transition: margin 0.5s ease;
-  transition: background-color 0.5s ease, width 0.5s ease, margin 0.5s ease, height 0.5s ease;
+  transition: 0.25s;
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-weight: bold;
