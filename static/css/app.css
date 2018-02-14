@@ -21,6 +21,28 @@ body>a:first-child {
     text-decoration: underline;
     z-index: -999;
 }
+main {
+    z-index: 0;
+    box-sizing: border-box;
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    background: whitesmoke;
+    height: 40em;
+    margin-bottom: 4em;
+    width: 45%;
+    z-index: 0;
+}
+
+section>h2:first-child {
+    background: #F95F62;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+}
 
 body>a:first-child:focus, body>a:first-child:active {
     color: #fff;
@@ -55,9 +77,18 @@ header h1 {
     font-family: Ampersand, Roboto, sans-serif;
     font-size: 4em;
     margin: 0;
-    padding-top: 2em;
+    margin-top: 2em;
     text-align: center;
-    margin-bottom: 1em;
+    height: auto;
+}
+
+nav {
+    transition: 0.5s;
+    z-index:99;
+    box-shadow: 0 0 0 50vmax rgba(0,0,0,.0);
+}
+nav:hover {
+	box-shadow: 0 0 0 50vmax rgba(0,0,0,.6);
 }
 
 nav>ul {
