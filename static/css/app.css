@@ -4,6 +4,21 @@
     unicode-range: U+26;
 }
 
+* {
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+p {
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 2em 0;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -20,28 +35,8 @@ body>a:first-child {
     overflow: hidden;
     text-decoration: underline;
     z-index: -999;
-}
-main {
-    z-index: 0;
-    box-sizing: border-box;
-    overflow: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-section {
-    background: whitesmoke;
-    height: 40em;
-    margin-bottom: 4em;
-    width: 45%;
-    z-index: 0;
-}
-
-section>h2:first-child {
-    background: #F95F62;
-    color: white;
-    font-weight: normal;
-    text-align: center;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,.0);
 }
 
 body>a:first-child:focus, body>a:first-child:active {
@@ -50,6 +45,7 @@ body>a:first-child:focus, body>a:first-child:active {
     top: 0;
     overflow: auto;
     z-index: 999;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,.4);
     width: 100%;
     background: #F95F62;
     display: block;
@@ -59,6 +55,34 @@ body>a:first-child:focus, body>a:first-child:active {
     text-align: center;
     box-sizing: border-box;
     outline: 0;
+}
+
+main {
+    z-index: 0;
+    box-sizing: border-box;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 5em;
+    max-width: 60em;
+    margin: 0 auto;
+}
+
+section {
+    margin-top: 2em;
+    background: whitesmoke;
+    height: 40em;
+    margin-bottom: 4em;
+    z-index: 0;
+}
+
+section>h2:first-child {
+    background: #F95F62;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+    padding: 0.5em;
 }
 
 header {
@@ -75,22 +99,9 @@ header {
 
 header h1 {
     font-family: Ampersand, Roboto, sans-serif;
-    font-size: 4em;
-    margin: 0;
-    margin-top: 2em;
     text-align: center;
     height: auto;
 }
-
-nav {
-    transition: 0.5s;
-    z-index:99;
-    box-shadow: 0 0 0 50vmax rgba(0,0,0,.0);
-}
-nav:hover, nav:focus-within {
-	box-shadow: 0 0 0 50vmax rgba(0,0,0,.6);
-}
-
 nav>ul {
     background: #1F2D3D;
     background-size: cover;
@@ -163,10 +174,15 @@ nav>ul>li {
     width: 100%;
 }
 
-@media (max-width: 52em) {
+@media (max-width: 60em) {
     nav>ul {
         flex-wrap: wrap;
         background: black;
         height: auto;
+    }
+}
+@media (min-width: 80em) {
+    main {
+        max-width: 80em;
     }
 }
