@@ -24,7 +24,6 @@ button {
     color: #000;
     padding: 1em;
     text-align: center;
-    padding-left: 5em;
     transition: 0.25s;
     border: 1px solid #00000044;
     display: block;
@@ -33,6 +32,20 @@ button {
 button:hover, button:focus {
     background: #DC304B;
     color: #fff;
+}
+textarea,
+input[type$="text"],
+input[type$="email"],
+input[type$="password"] {
+    border: 6px solid #FFFFFF;
+    transition: border 0.25s;
+    padding: 0.5em;
+}
+textarea:focus,
+input[type$="text"]:focus,
+input[type$="email"]:focus,
+input[type$="password"]:focus {
+    border: 6px solid #343F4B99!important;
 }
 
 h1 {
@@ -81,7 +94,7 @@ main {
     overflow: auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-gap: 5em;
+    grid-column-gap: 5em;
     max-width: 60em;
     margin: 0 auto;
 }
@@ -153,19 +166,8 @@ section > form[action$="/sendmsg"] label {
     clip: rect(0,0,0,0);
 }
 section > form[action$="/sendmsg"] textarea {
-    padding: 0.5em;
-    box-sizing: border-box;
-    overflow: auto;
-    border: 0;
-    border-left: 1px solid #aaa;
-    transition: 0.25s;
-    resize: none;
-    border: 6px solid #FFFFFF;
-}
-
-section > form[action$="/sendmsg"] textarea:focus {
-    /*box-shadow: inset 0 0 20px #00000077;*/
-    border: 6px solid #343F4B99;
+    resize: vertical;
+    min-height: 1.3em;
 }
 
 section > form[action$="/sendmsg"]>button {
@@ -173,6 +175,17 @@ section > form[action$="/sendmsg"]>button {
     grid-template-columns: 1fr 5fr 2fr;
 }
 
+section > form[action$="/login"] {
+    display: grid;
+    padding: 1.5em;
+    grid-row-gap: 0.5em;
+}
+section > form[action$="/login"] fieldset {
+    border: 0;
+}
+section > form[action$="/login"] a {
+    margin: 1em 0 1em;
+}
 
 header {
     background: #DC304B;
@@ -277,6 +290,11 @@ nav>ul>li {
     main {
         grid-template-columns: 1fr;
     }
+    section {
+        margin: 2em 0 2em;
+        background: whitesmoke;
+        border: 0.1em solid #343F4B44;
+    }s
 }
 
 @media (min-width: 80em) {
