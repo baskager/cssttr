@@ -50,8 +50,10 @@ body>a:first-child {
     overflow: hidden;
     text-decoration: underline;
     z-index: -999;
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, filter 0.2s;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .0);
+    filter: blur(5px);
+    overflow: none;
 }
 
 body>a:first-child:focus, body>a:first-child:active {
@@ -70,6 +72,7 @@ body>a:first-child:focus, body>a:first-child:active {
     text-align: center;
     box-sizing: border-box;
     outline: 0;
+    filter: blur(0);
 }
 
 main {
