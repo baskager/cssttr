@@ -52,6 +52,7 @@ input[type$="password"]:focus {
 h1 {
     font-size: 4rem;
     margin: 2em 0;
+    padding: 0;
 }
 
 body>a:first-child {
@@ -188,6 +189,24 @@ section > form[action$="/login"] fieldset {
 }
 section > form[action$="/login"] a {
     margin: 1em 0 1em;
+}
+section article h1 {
+    font-size: 2em;
+    text-align: center;
+    margin: 0.5em;
+    color: #1F2D3D;
+}
+/* Chapter 7.36 - Intrinsic sizing*/
+section article figure {
+    max-width: 100%;
+	max-width: min-content;
+	margin: auto;
+    padding: 10px;
+	border: 1px solid silver;
+    margin-bottom: 1em;
+}
+section article figure>img {
+    max-width: inherit;
 }
 
 header {
