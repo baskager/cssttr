@@ -251,6 +251,10 @@ section > article h1 a {
 section > article img {
     margin: 0 auto;
 }
+section > article p {
+    padding: 1em;
+    text-align: justify;
+}
 
 header {
     background: #DC304B;
