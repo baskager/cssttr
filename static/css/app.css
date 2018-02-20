@@ -108,6 +108,17 @@ main {
     margin: 0 auto;
     padding: 1em;
 }
+section a {
+    color: #DC304B;
+}
+section a:hover {
+    color: #1F2D3D;
+}
+section a:focus {
+    color: #1F2D3D;
+    background: #26262622;
+    outline: none;
+}
 
 main:first-of-type {
     grid-template-columns: 2fr 1fr;
@@ -246,7 +257,6 @@ section > article figure>img {
 }
 section > article h1 a {
     text-decoration: none;
-    color: #DC304B;
 }
 section > article img {
     margin: 0 auto;
@@ -255,7 +265,71 @@ section > article p {
     padding: 1em;
     text-align: justify;
 }
+section > article > fieldset {
+    margin-top: 2em;
+    border: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: [row] auto [row] auto
+}
+section > article > fieldset legend{
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+section > article > fieldset input {
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+section > article > fieldset label{
+    text-align: center;
+    width: 75%;
+    height: 75%;
+    margin-left: 12.5%;
+    margin-bottom: 12.5%;
+    transition: 0.25s;
+}
+/* Hidden notice that will display on tab and explain how to use the rating element with a keyboard*/
+section > article > fieldset input ~ a {
+    overflow: hidden;
+    text-decoration: underline;
+    z-index: -999;
+    transition: box-shadow 0.2s, filter 0.2s;
+    filter: blur(5px);
+    overflow: none;
+    grid-row: row 2;
+    grid-column: span 4 ;
+}
+section > article > fieldset input:focus ~ a {
+    width: 100%;
+    color: #fff;
+    z-index: 1;
+    clip: auto;
+    width: 100%;
+    margin-bottom: 1em;
+    height: auto;
+    text-decoration: none;
+    overflow: auto;
+    background: #1F2D3D;
+    display: block;
+    color: rgba(255, 255, 255, 1);
+    padding: 0.75em;
+    text-align: center;
+    box-sizing: border-box;
+    outline: 0;
+    /*Chapter 7.33 - blur*/
+    filter: blur(0);
+}
 
+section > article > fieldset label:hover,
+section > article > fieldset input:checked + label{
+    width: 100%;
+    outline: none;
+    margin-left: 0;
+    margin-bottom: 0;
+    height: 100%;
+    color: #DC304B;
+    font-weight: bold;
+}
 header {
     background: #DC304B;
     background-size: cover;
@@ -287,6 +361,8 @@ nav>ul {
 }
 
 nav a {
+    width: 100%;
+    height: 100%;
     padding: 0.5em 0;
     text-align: center;
     box-sizing: border-box;
@@ -294,49 +370,56 @@ nav a {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     font-weight: bold;
-}
-
-nav a:not([href$="products"]) {
-    width: 100%;
-    height: 100%;
-}
-
-nav a:hover, nav a:focus {
-    outline: 0;
-    background: #DC304B;
-}
-
-/* All direct children of type a within li in the wrapper */
-
-nav>ul>li>a {
     display: block;
-    height: 50%;
     font-size: 3.5em;
 }
 
+nav>ul>li:hover a, nav>ul>li:focus-within a {
+    outline: 0;
+    width: 90%;
+    height: 90%;
+    background: #DC304B;
+}
+/* Submenu needs very specific styling */
+/* The submenu item has a main navigation item (header) which has half the hight
+Under the main item the submenu will be displayed in it's own grid.
+*/
+nav>ul>li:nth-child(2) {
+    height: 50%;
+}
+/* Reset the general styling on submenus */
+nav>ul>li:nth-child(2):hover a, nav>ul>li:nth-child(2):focus-within a {
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+nav>ul>li:nth-child(2) a:hover, nav>ul>li:nth-child(2) a:focus {
+    background: #DC304B;
+}
 /*Top of the submenu items (products > submenu products)*/
 
 /*Submenu items*/
-
+/* Submenu items are placed in their own grid and will be displayed under their main navigation item */
 nav>ul>li>ul {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    height: 50%;
+    height: 100%;
     width: 100%;
     list-style: none;
     border-top: 0.2em solid #DC304B;
 }
 
 nav>ul>li>ul:nth-child(2) a {
+    font-size: 1.5em;
     width: 100%;
     height: 100%;
     display: block;
 }
 
 nav>ul>li {
-    border: 0.1em 0.1em 0.1em 0.1em solid #DC304B;
     list-style: none;
     width: 100%;
 }
@@ -357,9 +440,13 @@ nav>ul>li {
     header>h1 {
         font-size: 3.5em;
     }
-    main {
+    main:first-of-type {
         grid-template-columns: 1fr;
     }
+    main:nth-of-type(2) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     section {
         margin: 2em 0 2em;
         background: whitesmoke;
@@ -370,11 +457,5 @@ nav>ul>li {
 @media (min-width: 80em) {
     main {
         max-width: 80em;
-    }
-
-    nav a:not([href$="products"]):hover, nav a:not([href$="products"]):focus {
-        width: 90%;
-        height: 90%;
-        outline: 0;
     }
 }
