@@ -303,6 +303,8 @@ section > article p {
 section > article > fieldset {
     margin-top: 2em;
     border: 0;
+}
+section > article > fieldset div {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: [row] auto [row] auto;
