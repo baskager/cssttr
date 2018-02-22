@@ -1,4 +1,8 @@
 # CSS to the rescue
+## DISCLAIMER
+The goal of this project is to illustrate how one can use the latest css selectors. For this reason it was forbidden to use classes. I am aware that this is not a best practice.
+
+This site is an experiment, not a demo for best practices :)
 ## Preview
 [Klik hier om de live demo te bekijken](https://baskager.github.io/cssttr/)
 
